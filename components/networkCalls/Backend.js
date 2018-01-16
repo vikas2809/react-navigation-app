@@ -39,3 +39,12 @@ const url='http://192.168.12.73:8080/api/';
         var getUrl=url+'v1/user/getAllUser';
         return fetch(getUrl);
     }
+
+
+    export function getUserDetail(email){
+        console.log(email);
+        console.log("inside getUserDeatils");
+        var getUserDetailUrl=url+'v1/user/getUserDetail/'+email;
+        console.log(getUserDetailUrl)
+        return fetch(getUserDetailUrl);
+    }

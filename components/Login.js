@@ -56,8 +56,9 @@ export default class Login extends Component{
                     alert(responseData.message);
                 if(responseData.success===true)
                 {
-                    alert(responseData.message)
+                    alert('Welcome!!! Valid User');
                     AsyncStorage.setItem('token',responseData.token);
+                    console.log('token',typeof responseData.token);
                     // const resetAction=NavigationActions.reset({
                     //         index: 0,
                     //         actions: [

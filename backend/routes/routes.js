@@ -15,4 +15,8 @@ router.route('/v1/user/getAllUser').get(controller.getAllUser);
 //authenticate the user and generate the token for the valid user
 router.route('/v1/user/authenticateUser').post(controller.authenticateUser);
 
+//getting the complete details of the user on the basis of their email
+router.route('/v1/user/getUserDetail/:email').get(controller.getUserDetails);
+
+
 module.exports=router;

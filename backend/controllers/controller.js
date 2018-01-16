@@ -119,3 +119,24 @@ exports.authenticateUser=(req,res)=>{
 
 }
 
+
+//requesting for the information of the user on the basis of the email
+exports.getUserDetails=(req,res)=>{
+    User.findOne({email:req.params.email},(err,response)=>{
+        if(err)
+        {
+            res.json({
+                "status": "empty",
+                "error": "404 Page Not Found"
+            })
+        }
+        else
+        {
+            res.json({
+                status: true,
+                respData: response
+            });
+        }  
+    })
+}
+

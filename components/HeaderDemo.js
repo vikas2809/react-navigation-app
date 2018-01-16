@@ -10,9 +10,7 @@ export default class HeaderDemo extends Component{
     render(){
         return(
             <Header
-            leftComponent={{ icon: 'menu', color: '#fff' }}
             centerComponent={{ text: 'Section List', style: { color: '#fff' , fontSize: 25} }}
-            rightComponent={{ icon: 'home', color: '#fff' }}
             />
         );
     }
